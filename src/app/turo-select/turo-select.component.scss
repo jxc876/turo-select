@@ -1,0 +1,49 @@
+// variables
+$selectedColor: #60D18C;
+$borderColor1: black;
+$borderColor2: #C7C7C7;
+$width: 600px;
+
+@mixin solid-border {
+  border: 1px solid $borderColor2;
+}
+
+.turo-select-wrapper {
+  width: $width;
+  @include solid-border;
+  margin-bottom: 20px;
+}
+
+.trigger {
+  @include solid-border;
+  padding: 10px;
+
+  &.focused-trigger {
+    border-color: $selectedColor;
+  }
+
+  .material-icons {
+    float: right;
+  }
+}
+
+.option-container {
+  display: grid;
+  //grid-gap: 10px;
+  grid-template-columns: repeat(2, $width / 2);
+
+  .option {
+    @include solid-border;
+    padding: 10px;
+    margin: 10px;
+    border-color: $borderColor1;
+    text-align: center;
+
+    &.selected-option {
+      border-color: $selectedColor;
+      background-color: $selectedColor;
+      color: white;
+    }
+  }
+
+}

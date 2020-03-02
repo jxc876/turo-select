@@ -1,0 +1,37 @@
+<div class="turo-select-wrapper">
+
+  <!-- Option Trigger -->
+  <div class="trigger border"
+       [ngClass]="{ 'focused-trigger': isOpen }"
+       (click)="toggle()">
+    {{triggerText}}
+
+    <i class="material-icons" *ngIf="isOpen">
+      keyboard_arrow_up
+    </i>
+    <i class="material-icons" *ngIf="!isOpen">
+      keyboard_arrow_down
+    </i>
+  </div>
+
+  <section class="option-container" *ngIf="isOpen">
+    <div
+      class="option"
+      [ngClass]="{ 'selected-option': isSelected(option)}"
+      *ngFor="let option of options"
+      (click)="optionClicked(option)">
+
+      <div class="option-icon" *ngIf="option.icon">
+        <i class="material-icons">
+          {{option.icon}}
+        </i>
+      </div>
+
+      <div class="option-text">
+        {{option.displayText}}
+      </div>
+
+    </div>
+  </section>
+</div>
+
