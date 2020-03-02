@@ -39,11 +39,17 @@ $width: 600px;
     border-color: $borderColor1;
     text-align: center;
 
+    &:hover {
+      color: $selectedColor;
+      border-color: $selectedColor;
+    }
+
     &.selected-option {
       border-color: $selectedColor;
       background-color: $selectedColor;
       color: white;
     }
+
   }
 
 }

@@ -6,6 +6,7 @@
        (click)="toggle()">
     {{triggerText}}
 
+    <!-- Trigger Icon (Open / Closed) -->
     <i class="material-icons" *ngIf="isOpen">
       keyboard_arrow_up
     </i>
@@ -14,19 +15,24 @@
     </i>
   </div>
 
+  <!-- Option Container -->
   <section class="option-container" *ngIf="isOpen">
+
+    <!-- List of Options -->
     <div
       class="option"
       [ngClass]="{ 'selected-option': isSelected(option)}"
       *ngFor="let option of options"
       (click)="optionClicked(option)">
 
+      <!-- Option Icon -->
       <div class="option-icon" *ngIf="option.icon">
         <i class="material-icons">
           {{option.icon}}
         </i>
       </div>
 
+      <!-- Option Text -->
       <div class="option-text">
         {{option.displayText}}
       </div>
