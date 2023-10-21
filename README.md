@@ -1,5 +1,10 @@
 # TuroSelect
 
+Code for my Medium Article [Recreating the Turo Select Component](https://medium.com/@jxc876/recreating-the-turo-select-component-2cd51474a49c)
+
+
+# Angular CLI
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
 
 ## Development server
